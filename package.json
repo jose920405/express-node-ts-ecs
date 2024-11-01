@@ -1,0 +1,29 @@
+{
+  "name": "basic-nodejs-ts-example",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "ts-node-dev src/index.ts",
+    "complete-deploy": "chmod +x devopsScripts/deploy.sh && ./devopsScripts/deploy.sh",
+    "upload-image-to-ecr": "chmod +x devopsScripts/deploy-docker-img.sh && ./devopsScripts/deploy-docker-img.sh",
+    "create-and-push-task-definition": "chmod +x devopsScripts/task-definition.sh && ./devopsScripts/task-definition.sh"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "await-to-js": "^3.0.0",
+    "aws-sdk": "^2.1691.0",
+    "express": "^4.21.1"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.8.4",
+    "ts-node": "^10.9.2",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.6.3"
+  }
+}
