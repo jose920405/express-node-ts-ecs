@@ -4,21 +4,21 @@ ENV='dev'
 PREFIX='spreso-main-jose'
 CLUSTER_NAME=$PREFIX-cluster-$ENV
 
-SERVICE_NAME=$PREFIX-sign-service-$ENV # Sign
-# SERVICE_NAME=$PREFIX-service-$ENV # main
+# SERVICE_NAME=$PREFIX-sign-service-$ENV # Sign
+SERVICE_NAME=$PREFIX-service-$ENV # main
 
-TASK_DEFINITION_NAME=$PREFIX-$ENV-sign # Sign
-# TASK_DEFINITION_NAME=$PREFIX-$ENV # main
+# TASK_DEFINITION_NAME=$PREFIX-$ENV-sign # Sign
+TASK_DEFINITION_NAME=$PREFIX-$ENV # main
 
 # These 3 are used in the setTaskDefinition.js file.
 export AWS_ACCOUNT_ID="552333553084"
 export INTERNAL_AWS_REGION="us-east-1"
 
-export IMAGE_NAME="spreso-sign" # Sign
-# export IMAGE_NAME="spreso" # Main
+# export IMAGE_NAME="spreso-sign" # Sign
+export IMAGE_NAME="spreso" # Main
 
-export CI_JOB_ID="1" # Sign
-# export CI_JOB_ID="1" # Main
+# export CI_JOB_ID="1" # Sign
+export CI_JOB_ID="1" # Main
 
 # Mensaje de inicio de build
 echo "Build started"

@@ -20,7 +20,7 @@ function createTaskDefinitionInput(taskDefinitionJson) {
     containerDefinitions: [{
       ...taskDefinitionJson?.taskDefinition?.containerDefinitions[0],
       environment: [
-        // No env vars required
+        { name: 'NODE_ENV', value: 'prod' },
       ],
       image: `${process.env.AWS_ACCOUNT_ID}.dkr.ecr.${process.env.INTERNAL_AWS_REGION}.amazonaws.com/${process.env.IMAGE_NAME}:latest`,
     }],

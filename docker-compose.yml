@@ -1,17 +1,13 @@
 version: '3'
 services:
-  spreso-main-sign-api: # Sign
-  # spreso-main-api: # Main
-    # container_name: "spreso" # Main
-    # image: spreso:latest # Main
-    container_name: "spreso-sign" # Sign
-    image: spreso-sign:latest # Sign
-    environment:
-      - NODE_ENV=prod # Everything built with docker is considered production in this project example
+  # spreso-main-sign-api: # Sign
+  spreso-main-api: # Main
+    container_name: "spreso" # Main
+    image: spreso:latest # Main
+    # container_name: "spreso-sign" # Sign
+    # image: spreso-sign:latest # Sign
     build:
       context: .
       dockerfile: Dockerfile
     ports:
-      # - "8000:8000" # Main
-      # - "8001:8001" # Sign
       - "80:80"

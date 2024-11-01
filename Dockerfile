@@ -28,4 +28,4 @@ RUN npm run build
 EXPOSE 80
 
 # Comando para iniciar la aplicación
-CMD ["node", "dist/index.js"]
+CMD ["node", "dist/src/index.js"]
